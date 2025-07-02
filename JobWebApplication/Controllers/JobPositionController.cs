@@ -56,6 +56,7 @@ namespace JobWebApplication.Controllers
         public async Task<IActionResult> DeleteJob(int id) { 
            var job = await _mediator.Send(new DeleteJobPositionCommand(id));
            return !job ? NotFound() : NoContent();
+
         }
     }
 }
